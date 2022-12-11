@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ListCustomersComponent } from './pages/list-customers/list-customers.component';
 
 const routes: Routes = [
   {
@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: "dashboard",
         component: DashboardComponent
+      },
+      {
+        path: "list-customers",
+        component: ListCustomersComponent
       },
       {
         path: "**",

@@ -3,16 +3,20 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { ListCustomersComponent } from './pages/list-customers/list-customers.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ListCustomersComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ]
 })
 export class HomeModule { }
