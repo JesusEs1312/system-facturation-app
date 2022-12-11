@@ -11,11 +11,11 @@ export class CustomerService {
 
   public baseUrl: string = environment.baseUrl;
 
-  public getHeroes(): Observable<Customer[]>{
+  public getCustomers(): Observable<Customer[]>{
     return this.http.get<Customer[]>(`${ this.baseUrl }/customers`);
   }
   
-  public getHeroeById(id: string): Observable<Customer>{
+  public getCustomerById(id: string): Observable<Customer>{
     return this.http.get<Customer>(`${ this.baseUrl }/customers/${id}`);
   }
   
@@ -23,8 +23,8 @@ export class CustomerService {
 //     return this.http.get<Customer[]>(`${ this.baseUrl }/heroes?q=${ termino }&_limit=6`);
 //   }
 
-  public guardarHeroe(heroe: Customer): Observable<Customer>{
-    return this.http.post<Customer>(`${ this.baseUrl }/customers`, heroe);
+  public saveCustomer(customer: Customer): Observable<Customer>{
+    return this.http.post<Customer>(`${ this.baseUrl }/customers`, customer);
   }
 
   constructor( private http: HttpClient) { }
